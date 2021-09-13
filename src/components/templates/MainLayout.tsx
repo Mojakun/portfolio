@@ -10,28 +10,24 @@ import Footer from '@/organisms/layout/Footer';
 import Grid, { GridSpacing } from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import WContainer from '@/atoms/layout/WContainer';
-import UserHeader from '@/organisms/user/UserHeader'
+import UserHeader from '@/organisms/user/UserHeader';
 
 type Props = {
   children: React.ReactNode;
-
 };
-
 
 function MainLayout(props: Props): JSX.Element {
   return (
     <>
+      <Header />
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Header />
-        </Grid>
         <Grid item xs={12}>
           <HeaderImage />
         </Grid>
         <WContainer>
           <Grid container>
             <Grid item xs={12}>
-               {/* <UserHeader src={props.}/> */}
+              {/* <UserHeader src={props.}/> */}
             </Grid>
             <Grid item xs={4}>
               <Paper>xs=6</Paper>
@@ -48,7 +44,5 @@ function MainLayout(props: Props): JSX.Element {
     </>
   );
 }
-
-
 
 export default MainLayout;
