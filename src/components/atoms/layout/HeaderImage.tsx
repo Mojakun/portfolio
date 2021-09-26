@@ -16,10 +16,10 @@ function HeaderImage() {
 }
 
 const SDiv = styled.div`
-  background: url("/sample_header_image.png")center top/cover no-repeat;;
+  background: url("https://picsum.photos/1260/150")center top/cover no-repeat;;
   width: 100%;
 	height: 0;
-	padding-top: calc(300 / 1000 * 100%); /* calc(画像高さ÷画像幅 ×100%) */
+	padding-top: calc(150 / 1000 * 100%); /* calc(画像高さ÷画像幅 ×100%) */
 `;
 
 export default HeaderImage;

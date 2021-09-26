@@ -10,7 +10,9 @@ const theme = createTheme({
         },
         secondary: {
         // オレンジ
-            main: "#FF5722"
+            main: "#FF5722",
+            dark: "#689F38",
+            light: "#DCEDC8"
         },
         text: {
         // ちょっと薄い黒
