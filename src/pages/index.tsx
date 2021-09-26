@@ -1,14 +1,11 @@
 import type { NextPage } from 'next';
-
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import WAvatar from '@/components/atoms/avatar/WAvatar';
 import MainLayout from '@/components/templates/MainLayout';
+import UserHeader from '@/components/organisms/user/UserHeader';
 
 const Home: NextPage = () => {
   return (
-    <MainLayout title="profile">
-    
+    <MainLayout title="profile" user_image_src="">
+      
     </MainLayout>
   );
 };

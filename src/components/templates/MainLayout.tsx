@@ -16,6 +16,7 @@ import UserHeader from '@/organisms/user/UserHeader';
 type Props = {
   title: string;
   children: React.ReactNode;
+  user_image_src: string;
 };
 
 function MainLayout(props: Props): JSX.Element {
@@ -27,6 +28,7 @@ function MainLayout(props: Props): JSX.Element {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <HeaderImage />
@@ -34,7 +36,7 @@ function MainLayout(props: Props): JSX.Element {
         <WContainer>
           <Grid container>
             <Grid item xs={12}>
-              {/* <UserHeader src={props.}/> */}
+              <UserHeader user_image_src={props.user_image_src} />
             </Grid>
             <Grid item xs={4}>
               <Paper>xs=6</Paper>

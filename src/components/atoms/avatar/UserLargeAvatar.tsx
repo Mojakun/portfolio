@@ -8,10 +8,10 @@ type Props = {
 };
 
 export default function UserLargeAvatar(props: Props) {
-  return (
-      <SAvater alt='avatar' src={props.src} />
-  );
+  return <SAvater alt='avatar' src={props.src} />;
 }
 
-const SAvater = styled(Avatar)``;
-
+const SAvater = styled(Avatar)`
+  width: 100px;
+  height: 100px;
+`;
