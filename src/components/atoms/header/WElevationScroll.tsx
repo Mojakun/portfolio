@@ -1,18 +1,16 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-
-
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 type Props = {
   window?: () => Window;
   children: React.ReactElement;
-}
+};
 
 function ElevationScroll(props: Props) {
   const { children, window } = props;
@@ -28,9 +26,5 @@ function ElevationScroll(props: Props) {
 }
 
 export default function ElevateAppBar(props: Props) {
-  return (
-      <ElevationScroll {...props}>
-        {props.children}
-      </ElevationScroll>
-  );
+  return <ElevationScroll {...props}>{props.children}</ElevationScroll>;
 }

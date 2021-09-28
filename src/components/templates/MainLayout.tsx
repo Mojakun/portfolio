@@ -4,7 +4,7 @@ import HeaderImage from '@/atoms/layout/HeaderImage';
 import Head from 'next/head';
 import styled from 'styled-components';
 import Header from '@/organisms/layout/Header';
-import Grid, { GridSpacing } from '@material-ui/core/Grid';
+import Grid, { GridSpacing } from '@mui/material/Grid';
 import WContainer from '@/atoms/layout/WContainer';
 import UserHeader from '@/organisms/user/UserHeader';
 

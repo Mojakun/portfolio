@@ -1,15 +1,12 @@
 import * as React from 'react';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 import styled from 'styled-components';
-import theme from 'styles/theme'
-
+import theme from 'styles/theme';
 
 type props = {
-  color:'primary | secondary | '
-}
+  color: 'primary | secondary | ';
+};
 
 export default function ColorChips() {
-  return <Chip label='エンジニア' color="primary" variant='outlined' />;
+  return <Chip label='エンジニア' color='primary' variant='outlined' />;
 }
-
-

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material/styles';
 import styled from 'styled-components';
 import UserLargeAvatar from '@/components/atoms/avatar/UserLargeAvatar';
 import CategoryChip from '@/atoms/chip/CategoryChip';
-import CardHeader from '@material-ui/core/CardHeader';
+import CardHeader from '@mui/material/CardHeader';
 
 type Props = {
   user_image_src: string;

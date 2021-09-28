@@ -1,17 +1,17 @@
 import React from 'react';
-import { Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material/styles';
 import styled from 'styled-components';
-import AppBar from '@/molecules/header/AppBar'
+import AppBar from '@/molecules/header/AppBar';
 function Header() {
   return (
     <SHeader>
-      <AppBar/>
+      <AppBar />
     </SHeader>
   );
 }
 
 const SHeader = styled.header`
-  background:blue
+  background: blue;
 `;
 
 export default Header;

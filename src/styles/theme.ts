@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
@@ -14,11 +14,11 @@ const theme = createTheme({
       light: '#fab1c4',
     },
     text: {
-        primary: '#1f2937',
-        secondary: '#525860',
+      primary: '#1f2937',
+      secondary: '#525860',
     },
     background: {
-        default:'#f4f5f6'
+      default: '#f4f5f6',
     },
   },
 });
