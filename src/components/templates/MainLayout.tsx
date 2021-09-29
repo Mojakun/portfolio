@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Header from '@/organisms/layout/Header';
 import Grid, { GridSpacing } from '@mui/material/Grid';
 import WContainer from '@/atoms/layout/WContainer';
-import UserHeader from '@/organisms/user/UserHeader';
+import UserHeader from '@/components/organisms/user/Header';
 
 type Props = {
   title: string;

@@ -2,12 +2,13 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '@/components/templates/MainLayout';
 
-import Tab from '@mui/material/Tab';
+import Tab from '@material-ui/core/Tab';
 import TabList from '@material-ui/lab/TabList';
 import TabContext from '@material-ui/lab/TabContext';
 import TabPanel from '@material-ui/lab/TabPanel';
-import UserLink from '@/components/organisms/user/UserLink';
+import UserLink from '@/components/organisms/user/Link';
 import UserHome from './user/Home';
+import UserPlan from './user/Plan';
 
 const Home: NextPage = () => {
   const [value, setValue] = React.useState('1');
@@ -26,13 +27,15 @@ const Home: NextPage = () => {
           indicatorColor='primary'
         >
           <Tab label='HOME' value='1' />
-          <Tab label='WORK' value='2' />
+          <Tab label='PLAN' value='2' />
           <Tab label='SKILL' value='3' />
         </TabList>
         <TabPanel value='1'>
           <UserHome />
         </TabPanel>
-        <TabPanel value='2'>Item Two</TabPanel>
+        <TabPanel value='2'>
+          <UserPlan/>
+        </TabPanel>
         <TabPanel value='3'>Item Three</TabPanel>
       </TabContext>
     </MainLayout>

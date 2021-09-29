@@ -25,7 +25,7 @@ function UserHeader(props: Props) {
         }
         subheader={
           <>
-            <CategoryChip></CategoryChip>
+            <CategoryChip label="エンジニア"></CategoryChip>
           </>
         }
       ></CardHeader>

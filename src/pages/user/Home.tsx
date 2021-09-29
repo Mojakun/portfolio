@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import UserLink from '@/organisms/user/UserLink';
+import UserLink from '@/components/organisms/user/Link';
 import { Grid, Paper, Typography } from '@mui/material/';
 
 export default function UserHome() {
@@ -19,16 +19,16 @@ export default function UserHome() {
           </Paper>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink />
+          <UserLink icon={1}/>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink />
+          <UserLink icon={2}/>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink />
+          <UserLink icon={3}/>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink />
+          <UserLink icon={4}/>
         </Grid>
       </Grid>
     </>
