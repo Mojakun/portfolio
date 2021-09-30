@@ -40,17 +40,12 @@ export default function PlanCard() {
   return (
     <Card>
       <CardHeader
-        title="コラボ"
-        subheader={
-            <>
-                <CategorChip label="単発"　color="secondary"/>
-            </>
-        }
+        title="ポートフォリオ"
       />
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image="https://picsum.photos/id/10/200/300"
         alt="Paella dish"
       />
       <CardContent>

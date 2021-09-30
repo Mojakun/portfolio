@@ -8,7 +8,8 @@ import TabContext from '@material-ui/lab/TabContext';
 import TabPanel from '@material-ui/lab/TabPanel';
 import UserLink from '@/components/organisms/user/Link';
 import UserHome from './user/Home';
-import UserPlan from './user/Plan';
+import UserWork from './user/Work';
+import UserSkill from './user/Skill';
 
 const Home: NextPage = () => {
   const [value, setValue] = React.useState('1');
@@ -27,16 +28,18 @@ const Home: NextPage = () => {
           indicatorColor='primary'
         >
           <Tab label='HOME' value='1' />
-          <Tab label='PLAN' value='2' />
+          <Tab label='WORK' value='2' />
           <Tab label='SKILL' value='3' />
         </TabList>
         <TabPanel value='1'>
           <UserHome />
         </TabPanel>
         <TabPanel value='2'>
-          <UserPlan/>
+          <UserWork/>
         </TabPanel>
-        <TabPanel value='3'>Item Three</TabPanel>
+        <TabPanel value='3'>
+          <UserSkill/>
+          </TabPanel>
       </TabContext>
     </MainLayout>
   );

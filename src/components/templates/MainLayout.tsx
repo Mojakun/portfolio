@@ -25,7 +25,7 @@ function MainLayout(props: Props): JSX.Element {
       <Header />
 
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <HeaderImage />
         </Grid>
         <WContainer>

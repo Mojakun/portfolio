@@ -30,6 +30,12 @@ export default function UserHome() {
         <Grid item sm={6} xs={12}>
           <UserLink icon={4}/>
         </Grid>
+        <Grid item sm={6} xs={12}>
+          <UserLink icon={5}/>
+        </Grid>
+        <Grid item sm={6} xs={12}>
+          <UserLink icon={6}/>
+        </Grid>
       </Grid>
     </>
   );
