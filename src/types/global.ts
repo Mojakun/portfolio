@@ -9,3 +9,5 @@ export type BlogType = {
   title: string;
   date: string;
 };
+
+export  type ColorType = 'inherit' | 'primary' | 'secondary' | 'default' | 'info' | 'error' | 'success' | 'warning';

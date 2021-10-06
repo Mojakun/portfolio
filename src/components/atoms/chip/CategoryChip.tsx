@@ -1,16 +1,16 @@
 import * as React from 'react';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 import styled from 'styled-components';
-import { Theme } from '@material-ui/core/styles';
+import theme from 'styles/theme';
+import { OverridableStringUnion } from '@material-ui/types';
 
-type props = {
-  color:'primary | secondary | '
-}
-export default function ColorChips() {
-  return <SChip label='success' variant='outlined' />;
-}
+type Props = {
+  color?: OverridableStringUnion<
+    'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning'
+   >;
+  label: string;
+};
 
-const SChip = styled(Chip)`
-  color: ${Theme => theme.colors.primary}
-  border-color: pink;
-`;
+export default function ColorChips(props: Props) {
+  return <Chip label={props.label} color={props.color} variant='outlined' />;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material/styles';
 import styled from 'styled-components';
 
 function Footer() {
