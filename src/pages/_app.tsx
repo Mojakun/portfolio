@@ -5,8 +5,11 @@ import { ThemeProvider as MaterialUIThemeProvider } from '@mui/material/styles';
 import { StylesProvider } from '@material-ui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../styles/theme';
+import { ApolloProvider } from '@apollo/client';
+import { initializeApollo } from 'lib/apolloClient';
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  const client = initializeApollo();
   useEffect(() => {
     const jssStyles: Element | null = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -15,14 +18,16 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   }, []);
 
   return (
-    <StylesProvider injectFirst>
-      <MaterialUIThemeProvider theme={theme}>
-        <StyledComponentsThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </StyledComponentsThemeProvider>
-      </MaterialUIThemeProvider>
-    </StylesProvider>
+    <ApolloProvider client={client}>
+      <StylesProvider injectFirst>
+        <MaterialUIThemeProvider theme={theme}>
+          <StyledComponentsThemeProvider theme={theme}>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
+      </StylesProvider>
+    </ApolloProvider>
   );
 };
 

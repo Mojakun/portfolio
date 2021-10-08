@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import UserLink from '@/components/organisms/user/Link';
 import { Grid, Paper, Typography } from '@mui/material/';
 
+
+
 export default function UserHome() {
+
   return (
     <>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Paper elevation={0} sx={{padding:5}}>
+          <Paper elevation={0} sx={{ padding: 5 }}>
             <Typography variant='h6' component='h2'>
               自己紹介
             </Typography>
@@ -19,22 +22,22 @@ export default function UserHome() {
           </Paper>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={1}/>
+          <UserLink icon={1} />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={2}/>
+          <UserLink icon={2} />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={3}/>
+          <UserLink icon={3} />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={4}/>
+          <UserLink icon={4} />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={5}/>
+          <UserLink icon={5} />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <UserLink icon={6}/>
+          <UserLink icon={6} />
         </Grid>
       </Grid>
     </>

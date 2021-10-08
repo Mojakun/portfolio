@@ -15,6 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ElevationScroll from '@/atoms/header/WElevationScroll';
+import Link from 'next/link';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -167,32 +168,15 @@ export default function PrimarySearchAppBar() {
   return (
     <div className={classes.grow}>
       <ElevationScroll>
-        <AppBar position='static'>
+        <AppBar position='static' color='default'>
           <Toolbar>
-            <IconButton
-              edge='start'
-              className={classes.menuButton}
-              color='inherit'
-              aria-label='open drawer'
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography className={classes.title} variant='h6' noWrap>
-              Material-UI
-            </Typography>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder='Search…'
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </div>
+            <Link href='/home'>
+              <a>
+                <Typography className={classes.title} variant='h6' noWrap color='primary'>
+                  FOLIO
+                </Typography>
+              </a>
+            </Link>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <IconButton aria-label='show 4 new mails' color='inherit'>

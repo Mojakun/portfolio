@@ -7,16 +7,13 @@ import Header from '@/organisms/layout/Header';
 import Grid, { GridSpacing } from '@mui/material/Grid';
 import WContainer from '@/atoms/layout/WContainer';
 import UserHeader from '@/components/organisms/user/Header';
-import { GetUserByIdQuery } from 'types/generated/graphql';
 
 type Props = {
   title: string;
   children: React.ReactNode;
-  user_image_src: string;
-  user_data?: GetUserByIdQuery
 };
 
-function MainLayout(props: Props): JSX.Element {
+function HomeLayout(props: Props): JSX.Element {
   return (
     <>
       <Head>
@@ -27,22 +24,18 @@ function MainLayout(props: Props): JSX.Element {
       <Header />
 
       <Grid container spacing={3}>
-        <Grid item xs={12} >
-          <HeaderImage />
+        <Grid item xs={2} >
+            test
         </Grid>
-        <WContainer>
-          <Grid container>
-            <Grid item xs={12}>
-              <UserHeader user_image_src={props.user_image_src} />
-            </Grid>
-            <Grid item xs={12}>
-              {props.children}
-            </Grid>
-          </Grid>
-        </WContainer>
+        <Grid item xs={7} >
+            {props.children}
+        </Grid>
+        <Grid item xs={3} >
+            test
+        </Grid>
       </Grid>
     </>
   );
 }
 
-export default MainLayout;
+export default HomeLayout;
