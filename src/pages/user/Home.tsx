@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import UserLink from '@/components/organisms/user/Link';
 import { Grid, Paper, Typography } from '@mui/material/';
+import { UserContext } from 'provider/UserProvider';
 
 
 
 export default function UserHome() {
-
+  const userInfo = useContext(UserContext)
   return (
     <>
       <Grid container spacing={2}>
@@ -16,8 +17,7 @@ export default function UserHome() {
               自己紹介
             </Typography>
             <Typography variant='subtitle1' component='h2'>
-              ■ 34歳/エンジニア👨‍💻 nuxt.js ■ ミニマリスト ■ 努力はコスパ最強 ♬ king
-              gnu/suchmos/vaundy
+             {userInfo.content}
             </Typography>
           </Paper>
         </Grid>

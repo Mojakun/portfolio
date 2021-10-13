@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   return (
     <HomeLayout title='home'>
       {data?.d_users.map((users) => (
-        <Link href={`/?id=${users.id}`} key={users.id}>
+        <Link href={`/${users.original_id}`} key={users.id}>
           <a>{users.name}</a>
         </Link>
       ))}
