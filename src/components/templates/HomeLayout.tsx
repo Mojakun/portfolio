@@ -4,9 +4,7 @@ import HeaderImage from '@/atoms/layout/HeaderImage';
 import Head from 'next/head';
 import styled from 'styled-components';
 import Header from '@/organisms/layout/Header';
-import Grid, { GridSpacing } from '@mui/material/Grid';
-import WContainer from '@/atoms/layout/WContainer';
-import UserHeader from '@/components/organisms/user/Header';
+
 
 type Props = {
   title: string;
@@ -23,17 +21,8 @@ function HomeLayout(props: Props): JSX.Element {
       </Head>
       <Header />
 
-      <Grid container spacing={3}>
-        <Grid item xs={2} >
-            test
-        </Grid>
-        <Grid item xs={7} >
-            {props.children}
-        </Grid>
-        <Grid item xs={3} >
-            test
-        </Grid>
-      </Grid>
+     
+      {props.children}
     </>
   );
 }

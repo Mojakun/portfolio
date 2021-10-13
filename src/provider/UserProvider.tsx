@@ -15,8 +15,12 @@ export const UserProvider = (props: Props) => {
   const { data, error, loading } = useQuery<GetUserByOriginalIdQuery>(GET_USER_BY_ORIGINAL_ID, {
     variables: { original_id: original_id },
   });
+  
+  
   const { children } = props;
   const userInfo = data?.d_users[0];
+  
+
   return (
     <UserContext.Provider value={{ name: userInfo?.name, content: userInfo?.content, loading }}>
       {children}
