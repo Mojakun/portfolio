@@ -27,4 +27,5 @@ function HomeLayout(props: Props): JSX.Element {
   );
 }
 
+
 export default HomeLayout;

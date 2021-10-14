@@ -2058,6 +2058,11 @@ export type GetUserByOriginalIdQueryVariables = Exact<{
 
 export type GetUserByOriginalIdQuery = { __typename?: 'query_root', d_users: Array<{ __typename?: 'd_users', id: any, name: string, original_id: string, mail: string, password: string, content?: Maybe<string>, users_sns: Array<{ __typename?: 'users_sns', sns_id: number, url?: Maybe<string> }> }> };
 
+export type GetMCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetMCategoriesQuery = { __typename?: 'query_root', m_categories_header: Array<{ __typename?: 'm_categories_header', id: any, name: string, m_categories_details: Array<{ __typename?: 'm_categories_detail', id: any, header_id: any, name: string }> }> };
+
 
 export const GetUsersDocument = gql`
     query GetUsers {
@@ -2181,3 +2186,43 @@ export function useGetUserByOriginalIdLazyQuery(baseOptions?: Apollo.LazyQueryHo
 export type GetUserByOriginalIdQueryHookResult = ReturnType<typeof useGetUserByOriginalIdQuery>;
 export type GetUserByOriginalIdLazyQueryHookResult = ReturnType<typeof useGetUserByOriginalIdLazyQuery>;
 export type GetUserByOriginalIdQueryResult = Apollo.QueryResult<GetUserByOriginalIdQuery, GetUserByOriginalIdQueryVariables>;
+export const GetMCategoriesDocument = gql`
+    query GetMCategories {
+  m_categories_header {
+    id
+    name
+    m_categories_details {
+      id
+      header_id
+      name
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetMCategoriesQuery__
+ *
+ * To run a query within a React component, call `useGetMCategoriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetMCategoriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetMCategoriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetMCategoriesQuery(baseOptions?: Apollo.QueryHookOptions<GetMCategoriesQuery, GetMCategoriesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetMCategoriesQuery, GetMCategoriesQueryVariables>(GetMCategoriesDocument, options);
+      }
+export function useGetMCategoriesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetMCategoriesQuery, GetMCategoriesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetMCategoriesQuery, GetMCategoriesQueryVariables>(GetMCategoriesDocument, options);
+        }
+export type GetMCategoriesQueryHookResult = ReturnType<typeof useGetMCategoriesQuery>;
+export type GetMCategoriesLazyQueryHookResult = ReturnType<typeof useGetMCategoriesLazyQuery>;
+export type GetMCategoriesQueryResult = Apollo.QueryResult<GetMCategoriesQuery, GetMCategoriesQueryVariables>;

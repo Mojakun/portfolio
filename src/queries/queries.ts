@@ -41,3 +41,17 @@ export const GET_USER_BY_ORIGINAL_ID = gql`
     }
   }
 `;
+
+export const GET_M_CATEGORIES = gql`
+  query GetMCategories {
+    m_categories_header {
+      id
+      name
+      m_categories_details {
+        id
+        header_id
+        name
+      }
+    }
+  }
+`;
