@@ -1,5 +1,5 @@
 //Wはラッパー
-import React from 'react';
+import React, { useContext ,memo} from 'react';
 import HeaderImage from '@/atoms/layout/HeaderImage';
 import Head from 'next/head';
 import styled from 'styled-components';
@@ -7,14 +7,22 @@ import Header from '@/organisms/layout/Header';
 import Grid, { GridSpacing } from '@mui/material/Grid';
 import WContainer from '@/atoms/layout/WContainer';
 import UserHeader from '@/components/organisms/user/Header';
+import { GetUserByIdQuery } from 'types/generated/graphql';
+import { UserContext } from 'provider/UserProvider';
 
 type Props = {
   title: string;
   children: React.ReactNode;
-  user_image_src: string;
+  user_data?: GetUserByIdQuery;
 };
 
 function MainLayout(props: Props): JSX.Element {
+  const userInfo = useContext(UserContext);
+  if(userInfo.loading) {
+    return(
+      <p>loading</p>
+    )
+  }
   return (
     <>
       <Head>
@@ -25,13 +33,13 @@ function MainLayout(props: Props): JSX.Element {
       <Header />
 
       <Grid container spacing={3}>
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <HeaderImage />
         </Grid>
         <WContainer>
           <Grid container>
             <Grid item xs={12}>
-              <UserHeader user_image_src={props.user_image_src} />
+              <UserHeader />
             </Grid>
             <Grid item xs={12}>
               {props.children}
@@ -43,4 +51,4 @@ function MainLayout(props: Props): JSX.Element {
   );
 }
 
-export default MainLayout;
+export default memo(MainLayout);
