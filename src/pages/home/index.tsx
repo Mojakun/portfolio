@@ -5,9 +5,7 @@ import { useQuery } from '@apollo/client';
 import { GET_USERS, GET_M_CATEGORIES } from 'queries/queries';
 import { GetUsersQuery, GetMCategoriesQuery } from 'types/generated/graphql';
 import Grid from '@mui/material/Grid';
-
 import Link from 'next/link';
-
 import HomeCard from '@/components/organisms/user/HomeCard';
 import HomeNav from '@/components/organisms/layout/HomeNav';
 

@@ -13,6 +13,7 @@ import { GetMCategoriesQuery } from 'types/generated/graphql';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { alpha } from '@mui/material/styles';
+
 type Props = {
   categories: GetMCategoriesQuery;
 };
@@ -25,7 +26,6 @@ const HomeNav = (props: Props) => {
     console.log(e.target);
   };
 
-  console.log(categories);
 
   return (
     <>
