@@ -7,6 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../styles/theme';
 import { ApolloProvider } from '@apollo/client';
 import { initializeApollo } from 'lib/apolloClient';
+import "../styles/globals.css";
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const client = initializeApollo();
