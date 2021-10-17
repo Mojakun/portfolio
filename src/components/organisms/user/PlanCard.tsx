@@ -43,7 +43,7 @@ const PlanCard = () => {
         title='コラボ'
         subheader={
           <>
-            <CategorChip label='単発' color='primary' />
+            <CategorChip label='単発'  />
           </>
         }
       />

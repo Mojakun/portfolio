@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <MainLayout title='profile'>
         <TabContext value={value}>
           <TabList
-            onChange={handleChange}
+            // onChange={handleChange}
             aria-label='lab API tabs example'
             textColor='primary'
             indicatorColor='primary'

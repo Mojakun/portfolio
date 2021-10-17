@@ -18,7 +18,7 @@ type Props = {
 
 function MainLayout(props: Props): JSX.Element {
   const userInfo = useContext(UserContext);
-  if(userInfo.loading) {
+  if(!userInfo) {
     return(
       <p>loading</p>
     )

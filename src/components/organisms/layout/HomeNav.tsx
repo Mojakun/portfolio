@@ -21,9 +21,9 @@ type Props = {
 const HomeNav = (props: Props) => {
   const [categories, setCatefories] = useState(props.categories.m_categories_header);
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     // setCatefories({ ...categories, false: e.target.isOpen });
-    console.log(e.target);
+    console.log('moja');
   };
 
 
@@ -45,7 +45,7 @@ const HomeNav = (props: Props) => {
         <>
           <ListItemButton onClick={handleClick}>
             <SListItemText primary={category.name} />
-            {category.isOpen ? <ExpandLess /> : <ExpandMore />}
+            {category ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           {category.m_categories_details.map((detail) => (
             <Collapse in={true} timeout='auto' unmountOnExit key={detail.id}>

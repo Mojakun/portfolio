@@ -8,7 +8,7 @@ type Props = {
   id?: string;
   isError?: boolean;
   helperText?: string;
-  onChange: () => void;
+  // onChange: () => void;
 };
 
 const WTextField = (props: Props) => {
@@ -20,7 +20,7 @@ const WTextField = (props: Props) => {
         label={props.label}
         variant='outlined'
         helperText={props.helperText}
-        onChange={props.onChange}
+        // onChange={props.onChange}
         error={props.isError}
       />
     </>

@@ -17,7 +17,7 @@ export default function UserHome() {
               自己紹介
             </Typography>
             <Typography variant='subtitle1' component='h2'>
-             {userInfo.content}
+             {userInfo}
             </Typography>
           </Paper>
         </Grid>

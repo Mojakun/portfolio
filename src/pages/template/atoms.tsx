@@ -43,7 +43,7 @@ const Atoms: NextPage = () => {
           <Paper elevation={3} sx={{ padding: '1rem', justifyContent: 'center', display: 'flex' }}>
             <WTextField
               value={WTextiFieldValue}
-              onChange={setWTextiFieldValue}
+              // onChange={setWTextiFieldValue}
               label='test'
               isError={false}
               helperText=''

@@ -17,12 +17,12 @@ const UserHeader = () => {
       <CardHeader
         avatar={
           <>
-            <UserLargeAvatar src={userInfo.image_sorce} />
+            <UserLargeAvatar src={'tse'} />
           </>
         }
         title={
           <>
-            <SUserName>{userInfo.name}</SUserName>
+            <SUserName>{userInfo}</SUserName>
           </>
         }
         subheader={
