@@ -29,111 +29,12 @@ const Home: NextPage = () => {
     );
   return (
     <HomeLayout title='home'>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{pt:3}}>
         <Grid item xs={2}>
           {categories && <HomeNav categories={categories}></HomeNav>}
         </Grid>
         <Grid item xs={8}>
           <Grid container spacing={1}>
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
-            {users?.d_users.map((user) => (
-              <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
-                <Link href={`/${user.original_id}`}>
-                  <a>
-                    <HomeCard userInfo={user} />
-                  </a>
-                </Link>
-              </Grid>
-            ))}
             {users?.d_users.map((user) => (
               <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={user.id}>
                 <Link href={`/${user.original_id}`}>
