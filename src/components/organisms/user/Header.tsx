@@ -1,40 +1,43 @@
-import React from 'react';
+import React, { useContext, memo ,VFC} from 'react';
 import { Theme } from '@mui/material/styles';
 import styled from 'styled-components';
 import UserLargeAvatar from '@/components/atoms/avatar/UserLargeAvatar';
 import CategoryChip from '@/atoms/chip/CategoryChip';
 import CardHeader from '@mui/material/CardHeader';
+import { UserContext } from 'provider/UserProvider';
+import { GetUserByIdQuery } from 'types/generated/graphql';
 
-type Props = {
-  user_image_src: string;
-};
 
-function UserHeader(props: Props) {
+
+const UserHeader = () => {
+  const userInfo = useContext(UserContext);
   return (
+    
     <>
       <CardHeader
         avatar={
           <>
-            <UserLargeAvatar src={props.user_image_src} />
+            <UserLargeAvatar src={userInfo.image_sorce} />
           </>
         }
         title={
           <>
-            <SUserName>もじゃくん</SUserName>
+            <SUserName>{userInfo.name}</SUserName>
           </>
         }
         subheader={
           <>
-            <CategoryChip label="エンジニア"></CategoryChip>
+            <CategoryChip label='エンジニア'></CategoryChip>
           </>
         }
       ></CardHeader>
     </>
   );
-}
+
+};
 
 const SUserName = styled.h1`
   font-size: 1.5rem;
 `;
 
-export default UserHeader;
+export default memo(UserHeader)

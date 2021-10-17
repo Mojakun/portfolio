@@ -2,7 +2,6 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      // 緑色
       main: '#7bb1fc',
       dark: '#4a6a97',
       light: '#b0d0fd',
